@@ -8,8 +8,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.SeekBar;
+import android.widget.TextView;
 
-import com.squareup.picasso.Picasso;
+import static edu.asu.ame.meteor.speedytiltshift2022.SpeedyTiltShift.TimeInterval;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -68,6 +69,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 javaPress(view);
+				TextView myTextView = (TextView)findViewById(R.id.textBox);
+                myTextView.setText("Using Java: Elapsed time:"+TimeInterval+" ms");               
             }
         });
         cppbtn.setOnClickListener(new Button.OnClickListener(){
@@ -75,6 +78,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 cppPress(view);
+                TextView myTextView = (TextView)findViewById(R.id.textBox);
+                myTextView.setText("Using C++: Elapsed time:"+TimeInterval+" ms");
             }
         });
         neonbtn.setOnClickListener(new Button.OnClickListener(){
@@ -82,6 +87,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 neonPress(view);
+                TextView myTextView = (TextView)findViewById(R.id.textBox);
+                myTextView.setText("Using Neon: Elapsed time:"+TimeInterval+" ms");
             }
         });
         imgbtn1.setOnClickListener(new Button.OnClickListener() {

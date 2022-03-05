@@ -19,7 +19,8 @@ add_library( # Sets the name of the library.
              SHARED
 
              # Provides a relative path to your source file(s).
-             src/main/cpp/native-lib.cpp )
+             src/main/cpp/native-lib.cpp
+        )
  set_property(SOURCE src/main/cpp/native-lib.cpp
                APPEND_STRING PROPERTY COMPILE_FLAGS " -mfpu=neon")
 # Searches for a specified prebuilt library and stores the path as a
